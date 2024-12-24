@@ -20,8 +20,7 @@ void main() {
       final dioError = DioError(
         error: exception,
         requestOptions: RequestOptions(path: '/foo/bar'),
-        stackTrace: stacktrace,
-      );
+      )..stackTrace=stacktrace;
 
       final result = sut.stackTrace(dioError);
 
